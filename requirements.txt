@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+vaderSentiment
+better-profanity
+google-generativeai
+scikit-learn
+altair

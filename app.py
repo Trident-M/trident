@@ -71,12 +71,16 @@ def _safe_secret(key, default):
     except Exception:
         return default
 
+
 GEMINI_API_KEYS = [
-    _safe_secret("GEMINI_API_KEY_1", "AIzaSyBiWxEGrEgICtjP5Hnmg2nJl9V4R96zDhg"),
-    _safe_secret("GEMINI_API_KEY_2", "AIzaSyCy9LUWSOI2uR0lDrIQHdc3CNiZrkoT7Y4"),
+    _safe_secret("GEMINI_API_KEY_1", ""),
+    _safe_secret("GEMINI_API_KEY_2", ""),
+    _safe_secret("GEMINI_API_KEY_3", ""),
+    _safe_secret("GEMINI_API_KEY_4", ""),
+    _safe_secret("GEMINI_API_KEY_5", ""),
 ]
 
-_random.shuffle(GEMINI_API_KEYS)
+GEMINI_API_KEYS = [k for k in GEMINI_API_KEYS if k.strip()]
 
 LOGO_FILE    = "Copilot_20260512_163516.png"
 AEGIS_CSV    = next((p for p in [
